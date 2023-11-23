@@ -8,10 +8,15 @@ template SquareNTimes (n) {
     square[0] <== base;
     for(var i =0; i < n; i++) {
         // constraint 1
-        square[i+1] <==
+        square[i+1] <== square[i]**2;
     }
     // constraint 2
-    result <==
+    result <== square[n];
 }
 
 component main { public [ base ] } = SquareNTimes(2);
+
+
+/* INPUT = {
+    "base": "3"
+} */
